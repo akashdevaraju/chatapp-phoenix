@@ -22,7 +22,7 @@ defmodule Chatapp.RoomChannel do
     {:noreply, socket}
   end
 
-  def handle_in("message:in", payload, socket) do
+  def handle_in("message:new", payload, socket) do
     broadcast socket, "message:new", payload
     {:noreply, socket}
   end
