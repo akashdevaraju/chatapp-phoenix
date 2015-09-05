@@ -88,6 +88,9 @@ form.link, form.button {
   border: 1px solid #ddd;
   background: white;
   height: 300px;
+  padding: 4px;
+  padding-left: 10px;
+  overflow-y: scroll;
 }
 #message-input {
   background: #ddd;
