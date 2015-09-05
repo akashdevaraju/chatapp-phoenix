@@ -22,6 +22,11 @@ defmodule Chatapp.RoomChannel do
     {:noreply, socket}
   end
 
+  def handle_in("message:in", payload, socket) do
+    broadcast socket. "message:new", payload
+    {:noreply, socket}
+  end
+
   # This is invoked every time a notification is being broadcast
   # to the client. The default implementation is just to push it
   # downstream but one could filter or change the event.
