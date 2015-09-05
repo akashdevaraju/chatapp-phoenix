@@ -78,3 +78,21 @@ form.link, form.button {
     border-bottom: 0;
   }
 }
+
+/* Custom styling */
+#message-box {
+  background: #ddd;
+  padding: 4px;
+}
+#message-all {
+  border: 1px solid #ddd;
+  background: white;
+  height: 300px;
+}
+#message-input {
+  background: #ddd;
+  padding: 4px;
+}
+#message-message {
+  width: 100%;
+}
