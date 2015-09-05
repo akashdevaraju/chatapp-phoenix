@@ -5,8 +5,11 @@
     </div>
   </div>
 </div>
-<div class="row">
-  <div class="col-xs-12">
+<div id="message-input" class="row">
+  <div class="col-xs-3">
+    <input type="text" id="message-user" placeholder="User">
+  </div>
+  <div class="col-xs-9">
     <input type="text" id="message-message" placeholder="Enter message">
   </div>
 </div>
