@@ -28,7 +28,8 @@ defmodule Chatapp.RoomChannel do
   end
 
   def handle_in("user:new", payload, socket) do
-    broadcast socket, "user:new", payload
+    broadcast_from socket, "user:new", payload
+    push socket, "user:me", payload
     {:noreply, socket}
   end
 

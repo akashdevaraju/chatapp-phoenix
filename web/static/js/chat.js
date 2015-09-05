@@ -35,3 +35,8 @@ channel.on("message:new", payload => {
 channel.on("user:new", payload => {
   $('#message-all').append(payload.user + ' has joined <br>')
 })
+
+// Display message of joining only to me
+channel.on("user:me", payload => {
+  $('#message-all').append('You have entered the room')
+})
