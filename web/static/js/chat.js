@@ -14,4 +14,9 @@ $('#message-message').off("keypress").on("keypress", function(event) {
     })
     $('#message-message').val("")
   }
-});
+})
+
+// Capture sent message and display
+channel.on("message:new", payload => {
+  console.log(payload)
+})
