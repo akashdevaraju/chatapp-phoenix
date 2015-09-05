@@ -19,4 +19,5 @@ $('#message-message').off("keypress").on("keypress", function(event) {
 // Capture sent message and display
 channel.on("message:new", payload => {
   console.log(payload)
+  $('#message-all').append(payload.message + '<br>')
 })
