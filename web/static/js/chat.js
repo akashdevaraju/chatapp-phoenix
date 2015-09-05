@@ -10,6 +10,7 @@ channel.join()
 $('#message-message').off("keypress").on("keypress", function(event) {
   if(event.keyCode == 13) {
     channel.push("message:new", {
+      user: $('#message-user').val(),
       message: $('#message-message').val()
     })
     $('#message-message').val("")
@@ -28,15 +29,15 @@ $('#message-user').off("keypress").on("keypress", function(event) {
 // Capture sent message and display
 channel.on("message:new", payload => {
   console.log(payload)
-  $('#message-all').append(payload.message + '<br>')
+  $('#message-all').append(payload.user + " . " + payload.message + '<br>')
 })
 
 // Capture username and display
 channel.on("user:new", payload => {
-  $('#message-all').append(payload.user + ' has joined <br>')
+  $('#message-all').append("User: " + payload.user + ' has joined <br>')
 })
 
 // Display message of joining only to me
 channel.on("user:me", payload => {
-  $('#message-all').append('You have entered the room')
+  $('#message-all').append('You have entered the room<br>')
 })
