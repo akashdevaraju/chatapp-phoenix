@@ -1,5 +1,9 @@
 # Chatapp
 
+A simple chat app made at [Bangalore elixir meetup](https://twitter.com/elixirblr) by [@_wicliff](https://twitter.com/_wicliff) to demo the realtime features of Phoenix framework
+
+---
+
 To start your Phoenix app:
 
   1. Install dependencies with `mix deps.get`
