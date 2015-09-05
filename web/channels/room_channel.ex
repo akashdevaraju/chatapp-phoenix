@@ -1,7 +1,7 @@
 defmodule Chatapp.RoomChannel do
   use Chatapp.Web, :channel
 
-  def join("rooms:lobby", payload, socket) do
+  def join("rooms:*", payload, socket) do
     if authorized?(payload) do
       {:ok, socket}
     else
@@ -23,7 +23,7 @@ defmodule Chatapp.RoomChannel do
   end
 
   def handle_in("message:in", payload, socket) do
-    broadcast socket. "message:new", payload
+    broadcast socket, "message:new", payload
     {:noreply, socket}
   end
 
